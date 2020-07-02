@@ -1,28 +1,86 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar />
+    <Form />
+    <img src="@/assets/gold-striped-background-1.jpg" class="border" />
+    <Ratings />
+    <Map />
+    <Badge />
+    <Video />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "./components/NavBar.vue";
+import Form from "./components/Form.vue";
+import Ratings from "./components/Ratings.vue";
+import Map from "./components/Map.vue";
+import Badge from "./components/Badge.vue";
+import Video from "./components/Video.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    NavBar,
+    Form,
+    Ratings,
+    Map,
+    Badge,
+    Video,
+    Footer,
+  },
+};
 </script>
 
 <style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #191919;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Playfair Display", serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.border {
+  height: 25px;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding: 0 10rem;
+  }
+
+  .border {
+    height: 30px;
+  }
 }
 </style>
