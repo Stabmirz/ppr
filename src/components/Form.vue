@@ -2,10 +2,20 @@
   <div :style="{ backgroundImage: `url(${bg1})` }" class="form container">
     <div :style="{ backgroundImage: `url(${bg2})` }" class="input-container">
       <div>
-        <input type="text" v-model="location" placeholder="Current Location" class="input input1" />
+        <input
+          type="text"
+          v-model="location"
+          placeholder="Current Location"
+          class="input input1"
+        />
       </div>
       <div>
-        <input type="text" v-model="businessName" class="input input2"  placeholder="Business name, Plumber, HVAC..."/>
+        <input
+          type="text"
+          v-model="businessName"
+          class="input input2"
+          placeholder="Business name, Plumber, HVAC..."
+        />
       </div>
       <div>
         <input
@@ -87,11 +97,11 @@ export default {
 @media screen and (min-width: 640px) {
   .input-container,
   .form.container {
-    height: 100vh;
+    height: 50vh;
   }
 
   .input-container {
-    padding: 15vw 5vw;
+    padding: 25vw 5vw;
     display: flex;
     justify-content: space-around;
   }
@@ -101,9 +111,29 @@ export default {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .input-container,
+  .form.container {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .input-container {
+    padding: 15vw 5vw;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-   .input {
-    width: 20vw;
+  .input {
+    width: 22vw;
+  }
+  .input-container {
+    padding: 15vw 12vw;
+  }
+  .input-container,
+  .form.container {
+    height: 80vh;
   }
 }
 </style>

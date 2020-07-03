@@ -6,73 +6,74 @@
           <i class="icon ion-md-menu"></i>
           <i class="icon ion-md-close"></i>
         </div>
-        <a href="#" class="logo">
+        <router-link to="/" class="logo">
           <h1>Pittman & Pittman Realty</h1>
-        </a>
+        </router-link>
         <ul class="nav-list">
           <li>
-            <a href="#"
+            <router-link to="/"
               >Company
               <i class="icon ion-md-arrow-dropdown"></i>
-            </a>
+            </router-link>
             <ul class="sub-menu">
               <li>
-                <a href="#">About</a>
+                <router-link to="/about">About</router-link>
               </li>
               <li>
-                <a href="#">Legal</a>
+                <router-link to="/legal">Legal</router-link>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <router-link to="/blog">Blog</router-link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <router-link to="/contact">Contact</router-link>
               </li>
               <li>
-                <a href="#">Report</a>
+                <router-link to="/report-spam">Report Spam</router-link>
               </li>
               <li>
-                <a href="#">Spam</a>
+                <router-link to="/branding-guidelines"
+                  >Branding Guidelines</router-link
+                >
               </li>
               <li>
-                <a href="#">Branding</a>
-              </li>
-              <li>
-                <a href="#">Guidelines</a>
-              </li>
-              <li>
-                <a href="#">Supported</a>
-              </li>
-              <li>
-                <a href="#">Sources</a>
+                <router-link to="/supported-sources"
+                  >Supported Sources</router-link
+                >
               </li>
             </ul>
           </li>
           <li>
-            <a href="#"
-              >Get Listed
+            <router-link to="/">
+              Get Listed
               <i class="icon ion-md-arrow-dropdown"></i>
-            </a>
+            </router-link>
             <ul class="sub-menu">
               <li>
-                <a href="#">Benefits of Joining</a>
+                <router-link to="/benefits-of-joining"
+                  >Benefits of Joining</router-link
+                >
               </li>
               <li>
-                <a href="#">Add Business Free</a>
+                <router-link to="/add-business-free"
+                  >Add Business Free</router-link
+                >
               </li>
               <li>
-                <a href="#">Suggest a Business</a>
+                <router-link to="/suggest-a-business"
+                  >Suggest a Business</router-link
+                >
               </li>
               <li>
-                <a href="#">Featured Picks</a>
+                <router-link to="/featured-picks">Featured Picks</router-link>
               </li>
               <li>
-                <a href="#">Compare Plans</a>
+                <router-link to="/compare-plans">Compare Plans</router-link>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Login/Sign Up</a>
+            <router-link to="/login">Login/Sign Up</router-link>
           </li>
         </ul>
       </nav>
@@ -146,7 +147,7 @@ nav {
 
 .nav-list {
   width: 40vw;
-  background-color: black;
+  background-color: #000000e9;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -252,7 +253,7 @@ nav.active .nav-list {
   }
 
   .nav-list a {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .menu-icons {
@@ -264,12 +265,13 @@ nav.active .nav-list {
   }
 
   .sub-menu {
-    width: 20rem;
+    width: 25rem;
+    padding: 20px 10px;
     display: block;
     position: absolute;
     border: 3px solid transparent;
     border-top: 3px solid #f6d185;
-    background-color: #191919;
+    background-color: #191919d1;
   }
 
   .sub-menu::before {
@@ -285,6 +287,18 @@ nav.active .nav-list {
     top: 8rem;
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .sub-menu {
+    width: 31rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-list a {
+    font-size: 1.5vw;
   }
 }
 </style>

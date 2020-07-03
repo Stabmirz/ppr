@@ -30,7 +30,7 @@ export default {
   flex-direction: column;
   border-left: 15px solid #f6d185;
   border-right: 15px solid #fbf5db;
-  padding: 10vw 2vw;
+  padding:2vw;
   border-radius: 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -79,7 +79,7 @@ export default {
   }
 
   .badge-text h1 {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 }
 </style>

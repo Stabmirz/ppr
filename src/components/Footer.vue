@@ -1,42 +1,42 @@
 <template>
-  <div class="footer-container">
-    <div class="footer-text">
-      <h1>Pittman & Pittman Realty</h1>
-      <p>
-        Pittman & Pittman Realty provides full-service, residential real estate
-        services for buyers, sellers, and investors.
-      </p>
-      <p>IF YOU ARE THINKING ABOUT BUYING A HOME.......</p>
-      <p>* Free MLS Home Search</p>
-      <p>
-        If You are looking to buy a home, simply click the 'Search button above
-        where you can search the MLS for Free
-      </p>
-      <br />
-      <br />
-      <span class="copyright">©2020 Pittman & Pittman Realty</span>
-    </div>
-    <div class="footer-menu">
-      <div class="company">
-        <h1>Company</h1>
-        <a href="#">About</a>
-        <a href="#">Legal</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-        <a href="#">Report Spam</a>
-        <a href="#">Branding Guidelines</a>
-        <a href="#">Supported Sources</a>
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-text">
+        <h1>Pittman & Pittman Realty</h1>
+        <p>
+          Pittman & Pittman Realty provides full-service, residential real
+          estate services for buyers, sellers, and investors.
+        </p>
+        <p>IF YOU ARE THINKING ABOUT BUYING A HOME.......</p>
+        <p>* Free MLS Home Search</p>
+        <p>
+          If You are looking to buy a home, simply click the 'Search' button
+          above where you can search the MLS for Free
+        </p>
       </div>
-      <div class="get-listed">
-        <h1>Get Listed</h1>
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
-        <a href="#">Add Business Free</a>
-        <a href="#">Suggest a Business</a>
-        <a href="#">Featured Pick</a>
-        <a href="#">Compare Plans</a>
+      <div class="footer-menu">
+        <div class="company">
+          <h1>Company</h1>
+          <a href="#">About</a>
+          <a href="#">Legal</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a href="#">Report Spam</a>
+          <a href="#">Branding Guidelines</a>
+          <a href="#">Supported Sources</a>
+        </div>
+        <div class="get-listed">
+          <h1>Get Listed</h1>
+          <a href="#">Login</a>
+          <a href="#">Sign Up</a>
+          <a href="#">Add Business Free</a>
+          <a href="#">Suggest a Business</a>
+          <a href="#">Featured Pick</a>
+          <a href="#">Compare Plans</a>
+        </div>
       </div>
     </div>
+    <span class="copyright">©2020 Pittman & Pittman Realty</span>
   </div>
 </template>
 
@@ -49,12 +49,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
-.footer-container {
-  padding: 10vw 5vw;
-  display: flex;
+.footer {
+  padding: 10vw 5vw 5vw;
   color: white;
-  flex-direction: column;
   background-color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-text {
@@ -75,7 +78,7 @@ export default {
 .footer-text h1,
 .footer-menu h1 {
   color: #f6d185;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .footer-text h1 {
@@ -84,7 +87,7 @@ export default {
 }
 
 .footer-text p {
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 .footer-menu h1 {
@@ -126,8 +129,10 @@ span.copyright {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    padding: 5vw;
+  }
   .footer-container {
-    padding: 4vw;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -143,7 +148,10 @@ span.copyright {
     margin-bottom: 0px;
   }
 
-  .footer-text,
+  .footer-text{
+    width: 44%;
+  }
+
   .footer-menu {
     width: 45%;
   }
@@ -153,11 +161,37 @@ span.copyright {
   }
 
   .footer-text p {
-    font-size: 1.3vw;
+    font-size: 1.9vw;
   }
 
   .footer-menu a {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-text p {
+    font-size: 1.7vw;
+  }
+  span.copyright {
+  font-size: 20px;
+}
+}
+@media screen and (min-width: 1200px) {
+  span.copyright {
+  font-size: 24px;
+}
+.footer-menu a {
     font-size: 1.5vw;
+  }
+    .footer-text p {
+    font-size: 1.3vw;
+  }
+    .footer-text h1 {
+    font-size: 2.5vw;
+  }
+  .footer-menu h1 {
+    font-size: 2vw;
   }
 }
 </style>

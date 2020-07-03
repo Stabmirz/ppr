@@ -30,6 +30,7 @@ export default {
   background-color: white;
   padding: 2vw 5vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -44,6 +45,7 @@ export default {
   border: none;
   background-color: white;
   outline: none;
+  cursor: pointer;
 }
 
 .play img {
@@ -51,6 +53,9 @@ export default {
 }
 
 @media screen and (min-width: 640px) {
+  .video {
+    flex-direction: row;
+  }
   .video-text {
     font-size: 2.5vw;
     margin-bottom: 0px;

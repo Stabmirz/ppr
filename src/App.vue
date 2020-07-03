@@ -1,35 +1,17 @@
 <template>
   <div id="app">
     <NavBar />
-    <Form />
-    <img src="@/assets/gold-striped-background-1.jpg" class="border" />
-    <Ratings />
-    <Map />
-    <Badge />
-    <Video />
-    <Footer />
+    <router-view/>
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import Form from "./components/Form.vue";
-import Ratings from "./components/Ratings.vue";
-import Map from "./components/Map.vue";
-import Badge from "./components/Badge.vue";
-import Video from "./components/Video.vue";
-import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     NavBar,
-    Form,
-    Ratings,
-    Map,
-    Badge,
-    Video,
-    Footer,
   },
 };
 </script>
