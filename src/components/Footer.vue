@@ -2,16 +2,11 @@
   <div class="footer">
     <div class="footer-container">
       <div class="footer-text">
-        <h1>Pittman & Pittman Realty</h1>
+        <img src="@/assets/logo_sm.png" />
         <p>
-          Pittman & Pittman Realty provides full-service, residential real
-          estate services for buyers, sellers, and investors.
-        </p>
-        <p>IF YOU ARE THINKING ABOUT BUYING A HOME.......</p>
-        <p>* Free MLS Home Search</p>
-        <p>
-          If You are looking to buy a home, simply click the 'Search' button
-          above where you can search the MLS for Free
+          The BusinessRate ranking is based on customer satisfaction, online
+          presence, and social engagement. Find businesses online or list your
+          business today.
         </p>
       </div>
       <div class="footer-menu">
@@ -36,7 +31,7 @@
         </div>
       </div>
     </div>
-    <span class="copyright">©2020 Pittman & Pittman Realty</span>
+    <span class="copyright">©2020 BusinessRate. All Rights Reserved</span>
   </div>
 </template>
 
@@ -61,7 +56,12 @@ export default {
 }
 
 .footer-text {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+}
+
+.footer-text img {
+  width: 85%;
+  margin-bottom: 40px;
 }
 
 .company,
@@ -75,19 +75,14 @@ export default {
   text-align: center;
 }
 
-.footer-text h1,
 .footer-menu h1 {
   color: #f6d185;
   margin-bottom: 40px;
 }
 
-.footer-text h1 {
-  font-size: 7vw;
-  text-align: left;
-}
-
 .footer-text p {
   font-size: 5vw;
+  line-height: 1.5;
 }
 
 .footer-menu h1 {
@@ -98,7 +93,7 @@ export default {
   display: block;
   color: white;
   text-decoration: none;
-  font-size: 6vw;
+  font-size: 5vw;
   transition: color 650ms;
   margin-bottom: 15px;
 }
@@ -108,21 +103,17 @@ export default {
 }
 
 span.copyright {
-  font-size: 18px;
-  font-weight: 800;
-  margin-top: 50px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 640px) {
-  .footer-text h1 {
-    font-size: 3vw;
-  }
   .footer-menu h1 {
     font-size: 2.5vw;
   }
   .footer-text p {
     font-size: 2.3vw;
   }
+
   .footer-menu a {
     font-size: 2.5vw;
   }
@@ -130,7 +121,7 @@ span.copyright {
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 5vw;
+    padding: 5vw 6vw;
   }
   .footer-container {
     flex-direction: row;
@@ -148,50 +139,54 @@ span.copyright {
     margin-bottom: 0px;
   }
 
-  .footer-text{
+  .footer-text {
     width: 44%;
   }
 
   .footer-menu {
-    width: 45%;
+    width: 50%;
   }
 
   .footer-menu > div {
     width: 45%;
   }
 
-  .footer-text p {
-    font-size: 1.9vw;
+  .footer-text p, .footer-menu a {
+    font-size: 2vw;
   }
 
-  .footer-menu a {
-    font-size: 2vw;
+    span.copyright {
+    position: relative;
+    top: -80px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .footer-text p {
-    font-size: 1.7vw;
+
+  span.copyright {
+    font-size: 16px;
+    position: relative;
+    top: -70px;
   }
-  span.copyright {
-  font-size: 20px;
 }
-}
+
 @media screen and (min-width: 1200px) {
-  span.copyright {
-  font-size: 24px;
-}
-.footer-menu a {
+   .footer-text p,.footer-menu a {
     font-size: 1.5vw;
   }
-    .footer-text p {
-    font-size: 1.3vw;
+  span.copyright {
+    font-size: 18px;
+    top: -80px;
   }
-    .footer-text h1 {
-    font-size: 2.5vw;
-  }
+
+
   .footer-menu h1 {
     font-size: 2vw;
+  }
+
+    .footer-text {
+    width: 34%;
   }
 }
 </style>

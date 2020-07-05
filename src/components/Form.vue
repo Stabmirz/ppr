@@ -1,31 +1,41 @@
 <template>
   <div :style="{ backgroundImage: `url(${bg1})` }" class="form container">
-    <div :style="{ backgroundImage: `url(${bg2})` }" class="input-container">
-      <div>
-        <input
-          type="text"
-          v-model="location"
-          placeholder="Current Location"
-          class="input input1"
-        />
+    <div :style="{ backgroundImage: `url(${bg2})` }" class="bg">
+      <div class="heading">
+        <h1>Search for the Best Businesses at BusinessRate</h1>
+        <p>
+          Find rated businesses in your local area or across the country and
+          instantly view their latest ratings and reviews
+        </p>
       </div>
-      <div>
-        <input
-          type="text"
-          v-model="businessName"
-          class="input input2"
-          placeholder="Business name, Plumber, HVAC..."
-        />
-      </div>
-      <div>
-        <input
-          type="submit"
-          @click="search"
-          value="Find Business"
-          class="input input3"
-        />
+      <div class="input-container">
+        <div>
+          <input
+            type="text"
+            v-model="location"
+            placeholder="Current Location"
+            class="input input1"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            v-model="businessName"
+            class="input input2"
+            placeholder="Business name, Plumber, HVAC..."
+          />
+        </div>
+        <div>
+          <input
+            type="submit"
+            @click="search"
+            value="Find Business"
+            class="input input3"
+          />
+        </div>
       </div>
     </div>
+    <img src="@/assets/gold-striped-background-1.jpg" class="border" />
   </div>
 </template>
 
@@ -53,22 +63,36 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
-.form.container,
-.input-container {
-  height: 60vh;
-  padding: 0;
-  background-repeat: no-repeat;
-}
 .form.container {
+  padding: 15vw 0vw 0vw;
   width: 100%;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.input-container {
-  background-size: contain;
+.bg {
+  background-repeat: no-repeat;
   background-position: center;
-  padding-top: 15vw;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.heading {
+  padding: 0vw 2vw;
+}
+
+.heading h1 {
+  font-size: 7vw;
+  margin-bottom: 4vw;
+}
+.heading p {
+  font-size: 5vw;
+  margin: auto auto 8vw;
+}
+
+.input-container {
+  padding: 0 0 15vw;
 }
 
 .input {
@@ -94,46 +118,85 @@ export default {
   text-align: center;
 }
 
+.form.container img.border {
+  box-shadow: 7px 15px #cecece;
+}
+
 @media screen and (min-width: 640px) {
-  .input-container,
   .form.container {
-    height: 50vh;
+    padding: 5vw 0vw 0vw;
   }
 
   .input-container {
-    padding: 25vw 5vw;
     display: flex;
     justify-content: space-around;
+    padding: 0 0 5vw;
   }
 
+  .bg {
+    background-position: 0px 71px;
+  }
+
+  .heading {
+    padding: 0 4vw;
+  }
+
+  .heading h1 {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  .heading p {
+    font-size: 2.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .input {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bg {
+    background-position: 0px 117px;
+  }
+
+  .heading p {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bg {
+    background-position: 0px 130px;
+  }
+
+  .input-container {
+    width: 90%;
+    margin: auto;
+  }
   .input {
     width: 28vw;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .input-container,
-  .form.container {
-    height: 70vh;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .input-container {
-    padding: 15vw 5vw;
-  }
-}
-
 @media screen and (min-width: 1200px) {
+  .input-container {
+    width: 75%;
+    margin: auto;
+  }
+
   .input {
     width: 22vw;
   }
-  .input-container {
-    padding: 15vw 12vw;
+  .heading h1 {
+    font-size: 3vw;
+    margin-bottom: 3vw;
   }
-  .input-container,
-  .form.container {
-    height: 80vh;
+
+  .heading p {
+    font-size: 2vw;
+    margin-bottom: 3vw;
   }
 }
 </style>

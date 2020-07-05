@@ -2,7 +2,7 @@
   <div class="badge-container">
     <div class="badge">
       <div class="badge-text">
-        <h1>The Quality Service you Deserve.</h1>
+        <h1>Look for Businesses With This Sign of Quality</h1>
       </div>
       <div class="badge-img">
         <img src="@/assets/busrate-badge.png" />
@@ -30,7 +30,7 @@ export default {
   flex-direction: column;
   border-left: 15px solid #f6d185;
   border-right: 15px solid #fbf5db;
-  padding:2vw;
+  padding: 10vw;
   border-radius: 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -55,14 +55,13 @@ export default {
 }
 
 .badge-text h1 {
-  text-align: center;
   color: #f6d185;
   font-size: 7vw;
   margin-bottom: 5vw;
 }
 
 .badge-img img {
-  width: 75vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 640px) {
@@ -71,9 +70,19 @@ export default {
   }
 
   .badge {
+    padding:5vw;
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .badge-text {
+    width: 45vw;
+  }
+
+  .badge-img {
+    width: 40vw;
+  }
+
   .badge-img img {
     width: 45vw;
   }

@@ -7,7 +7,7 @@
           <i class="icon ion-md-close"></i>
         </div>
         <router-link to="/" class="logo">
-          <h1>Pittman & Pittman Realty</h1>
+          <img src="@/assets/logo_sm.png" />
         </router-link>
         <ul class="nav-list">
           <li>
@@ -111,6 +111,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  z-index:100;
 }
 
 .menu-icons {
@@ -138,11 +139,11 @@ nav {
 }
 
 .logo {
-  width: 60vw;
+  width: 50vw;
 }
 
-.logo h1 {
-  font-size: 5vw;
+.logo img {
+  width: 100%;
 }
 
 .nav-list {
@@ -234,7 +235,7 @@ nav.active .nav-list {
   text-align: left;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 660px) {
   .nav {
     padding: 5rem;
   }
@@ -258,10 +259,6 @@ nav.active .nav-list {
 
   .menu-icons {
     display: none;
-  }
-
-  .logo h1 {
-    font-size: 2.5vw;
   }
 
   .sub-menu {
@@ -296,9 +293,19 @@ nav.active .nav-list {
   }
 }
 
+@media screen and (min-width: 1024px) {
+   .logo img {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .nav-list a {
     font-size: 1.5vw;
+  }
+
+  .logo img {
+    width: 80%;
   }
 }
 </style>
