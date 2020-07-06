@@ -6,15 +6,18 @@
           List Your Business
         </h1>
         <p>
-          Achieve Your BusinessRate Status Gain Entry to our Premiere Directory
+          Achieve Your BusinessRate Status
+        </p>
+        <p>
+          Gain Entry to our Premiere Directory
         </p>
         <a href="/login" class="signUpButton">Sign Up Now</a>
       </div>
-      <div class="list">
+      <div class="list-img">
         <img src="@/assets/storefront-window.png" />
       </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -33,7 +36,7 @@ export default {
 
 <style scoped>
 .list-container {
-  padding: 10vw 5vw;
+  padding: 20vw 5vw;
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -41,8 +44,8 @@ export default {
 
 .list-text {
   align-self: center;
-  width: 90%;
-  margin-bottom: 5vw;
+  width: 95%;
+  margin:auto auto 10vw;
 }
 
 .list-text h1 {
@@ -54,10 +57,10 @@ export default {
 .list-text p {
   color: #ffffff;
   font-size: 5vw;
-  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
-.list img {
+.list-img img {
   width: 100%;
 }
 
@@ -76,6 +79,7 @@ export default {
   padding: 8px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffee66;
+  margin-top: 30px;
 }
 .signUpButton:hover {
   background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
@@ -87,32 +91,44 @@ export default {
 
 @media screen and (min-width: 640px) {
   .list-container {
-    padding:5vw 8vw;
+    padding: 10vw 8vw;
     flex-direction: row;
     justify-content: space-between;
   }
-  .list img {
-    width: 45vw;
-    margin-bottom: 0vw;
-  }
+
   .list-text h1 {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
 
   .list-text p {
     color: #ffffff;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
+
   .list-text {
     align-self: center;
-    width: 48%;
-    margin-bottom:0;
+    width: 55%;
+    margin: auto;
   }
 
-.signUpButton {
-    font-size:24px
-}
+  .list-img {
+    width: 40%;
+  }
+
+  .signUpButton {
+    font-size: 24px;
+  }
 }
 
+@media screen and (min-width: 1200px) {
+    .list-container {
+    padding: 5vw 8vw;
+    }
 
+
+  .list-text h1 {
+    font-size: 3vw;
+  }
+
+}
 </style>

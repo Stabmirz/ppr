@@ -3,20 +3,36 @@
     <h1>It is Fast and Easy to Find Best Rated Businesses in Your Area.</h1>
     <div class="businesses">
       <div class="restaurant">
-        <img src="@/assets/restaurant.png" />
-        <p>Restaurant</p>
+        <div>
+          <img src="@/assets/restaurant.png" />
+        </div>
+        <div>
+          <p>Restaurant</p>
+        </div>
       </div>
       <div class="handyman">
-        <img src="@/assets/handyman.png" />
-        <p>Handyman</p>
+        <div>
+          <img src="@/assets/handyman.png" />
+        </div>
+        <div>
+          <p>Handyman</p>
+        </div>
       </div>
       <div class="plumber">
-        <img src="@/assets/plumber.png" />
-        <p>Plumber</p>
+        <div>
+          <img src="@/assets/plumber.png" />
+        </div>
+        <div>
+          <p>Plumber</p>
+        </div>
       </div>
       <div class="electrician">
-        <img src="@/assets/electrician.png" />
-        <p>Electrician</p>
+        <div>
+          <img src="@/assets/electrician.png" />
+        </div>
+        <div>
+          <p>Electrician</p>
+        </div>
       </div>
     </div>
   </div>
@@ -33,12 +49,12 @@ export default {
 <style scoped>
 .business.container {
   background-color: white;
-  padding: 8vw 5vw;
+  padding: 20vw 5vw 5vw;
 }
 
 .business h1 {
   color: #6f6f6f;
-  font-size: 7vw;
+  font-size: 6vw;
   margin-bottom: 10vw;
 }
 
@@ -47,12 +63,21 @@ export default {
   margin: auto;
 }
 
+.restaurant > div:first-child,
+.handyman div:first-child,
+.plumber div:first-child,
+.electrician div:first-child {
+  height: 75%;
+}
+
 .restaurant,
 .handyman,
 .plumber,
 .electrician {
   margin-bottom: 15vw;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .restaurant p,
@@ -60,24 +85,36 @@ export default {
 .plumber p,
 .electrician p {
   color: #8a8585;
-  font-size: 7vw;
-  margin: 15px 0 40px;
+  font-size: 5vw;
+  margin: 20px 0 0;
 }
+
+
+  .restaurant img,
+  .handyman img,
+  .plumber img,
+  .electrician img {
+    height: 100%;
+  }
+
 
 @media screen and (min-width: 640px) {
   .businesses {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .business.container {
-    padding: 8vw;
+    padding: 10vw 5vw;
   }
 
   .business h1 {
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     margin-bottom: 5vw;
+  }
+
+  .businesses {
+    width: 90%;
   }
 
   .restaurant,
@@ -90,7 +127,7 @@ export default {
   .handyman p,
   .plumber p,
   .electrician p {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .restaurant img,
@@ -101,18 +138,27 @@ export default {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .businesses {
-    flex-wrap: nowrap;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .restaurant img,
   .handyman img,
   .plumber img,
   .electrician img {
     width: 100%;
+  }
+
+  .restaurant p,
+  .handyman p,
+  .plumber p,
+  .electrician p {
+    margin: 40px 0 0;
+    font-size: 2vw;
+  }
+
+  .business.container {
+    padding: 8vw;
+  }
+  .business h1 {
+    font-size: 2.5vw;
   }
 }
 </style>

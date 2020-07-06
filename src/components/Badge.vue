@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .badge-container {
-  padding: 10vw 5vw;
+  padding: 20vw 5vw;
   background-color: black;
 }
 
@@ -57,7 +57,7 @@ export default {
 .badge-text h1 {
   color: #f6d185;
   font-size: 7vw;
-  margin-bottom: 5vw;
+  margin-bottom: 10vw;
 }
 
 .badge-img img {
@@ -70,7 +70,7 @@ export default {
   }
 
   .badge {
-    padding:5vw;
+    padding:3vw 5vw;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -84,11 +84,19 @@ export default {
   }
 
   .badge-img img {
-    width: 45vw;
+    width: 40vw;
   }
 
   .badge-text h1 {
     font-size: 4vw;
+    margin-bottom:auto;
   }
+}
+
+@media screen and (min-width: 1200px) {
+
+   .badge-text h1 {
+    font-size: 3.5vw;
+   }
 }
 </style>

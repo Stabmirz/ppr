@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 10vw 5vw 5vw;
+  padding: 20vw 5vw 10vw;
   color: white;
   background-color: black;
 }
@@ -121,7 +121,7 @@ span.copyright {
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 5vw 6vw;
+    padding: 5vw 6vw 2vw;
   }
   .footer-container {
     flex-direction: row;
@@ -158,7 +158,7 @@ span.copyright {
     span.copyright {
     position: relative;
     top: -80px;
-    font-size: 14px;
+    font-size: 1.5vw;
   }
 }
 
@@ -173,7 +173,7 @@ span.copyright {
 
 @media screen and (min-width: 1200px) {
    .footer-text p,.footer-menu a {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
   }
   span.copyright {
     font-size: 18px;

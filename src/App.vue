@@ -52,7 +52,7 @@ html {
 }
 
 .border {
-  height: 25px;
+  height: 20px;
   width: 100%;
 }
 
@@ -62,7 +62,7 @@ html {
   }
 
   .border {
-    height: 30px;
+    height: 25px;
   }
 }
 </style>

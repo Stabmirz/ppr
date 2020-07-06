@@ -113,18 +113,54 @@ export default {
 }
 
 .input3 {
-  background-color: #f9e447b0;
+  box-shadow: 0px 1px 0px 0px #fff6af;
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color: #ffec64;
+  border: 1px solid #ffaa22;
+  display: inline-block;
   cursor: pointer;
-  text-align: center;
+  color: #333333;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+.input3:hover {
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
 }
 
 .form.container img.border {
   box-shadow: 7px 15px #cecece;
 }
 
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .input3 {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+  }
+
+  .input3:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .form.container {
-    padding: 5vw 0vw 0vw;
+    padding: 10vw 0vw 0vw;
   }
 
   .input-container {
@@ -148,7 +184,7 @@ export default {
 
   .heading p {
     font-size: 2.5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 5vw;
   }
 
   .input {
@@ -162,7 +198,7 @@ export default {
   }
 
   .heading p {
-    width: 70%;
+    width: 75%;
   }
 }
 

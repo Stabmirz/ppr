@@ -111,7 +111,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index:100;
+  z-index: 100;
 }
 
 .menu-icons {
@@ -135,7 +135,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 8rem;
+  height: 12vh;
 }
 
 .logo {
@@ -154,7 +154,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2rem;
+  padding: 2vw;
   height: 100vh;
   display: none;
   align-items: initial;
@@ -180,7 +180,7 @@ nav {
 .nav-list a {
   display: block;
   color: #eee;
-  padding: 0 2.5rem;
+  padding: 0 3.5vw;
   font-size: 6vw;
   transition: color 650ms;
 }
@@ -194,9 +194,9 @@ nav {
   border: 3px solid transparent;
   border-left-color: #f6d185;
   margin-left: 1rem;
-  max-height: 0;
-  width: 20rem;
+  width: 90vw;
   z-index: 100;
+  max-height:0;
   opacity: 0;
   visibility: hidden;
   transition: all 650ms ease;
@@ -212,10 +212,6 @@ nav {
   max-height: initial;
 }
 
-li.move-right {
-  margin: 0 auto 0 0;
-  line-height: initial;
-}
 
 .ion-md-close {
   display: none;
@@ -235,7 +231,11 @@ nav.active .nav-list {
   text-align: left;
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 768px) {
+  nav {
+    height: 5vh;
+  }
+
   .nav {
     padding: 5rem;
   }
@@ -254,7 +254,8 @@ nav.active .nav-list {
   }
 
   .nav-list a {
-    font-size: 2vw;
+    font-size: 2.4vw;
+    padding: 0 3vw;
   }
 
   .menu-icons {
@@ -262,13 +263,18 @@ nav.active .nav-list {
   }
 
   .sub-menu {
-    width: 25rem;
+    width: 25vw;
     padding: 20px 10px;
     display: block;
     position: absolute;
     border: 3px solid transparent;
     border-top: 3px solid #f6d185;
     background-color: #191919d1;
+  }
+
+  ul.sub-menu li a {
+    padding: 0 1.5vw;
+    font-size: 2vw;
   }
 
   .sub-menu::before {
@@ -287,14 +293,8 @@ nav.active .nav-list {
   }
 }
 
-@media screen and (min-width: 769px) {
-  .sub-menu {
-    width: 31rem;
-  }
-}
-
 @media screen and (min-width: 1024px) {
-   .logo img {
+  .logo img {
     width: 100%;
   }
 }
@@ -307,5 +307,36 @@ nav.active .nav-list {
   .logo img {
     width: 80%;
   }
+
+  nav {
+    height: 8vh;
+  }
+  .sub-menu {
+    width: 20vw;
+  }
+    ul.sub-menu li a {
+    font-size: 1.3vw;
+  }
 }
+
+@media screen and (min-width: 1600px) {
+  .nav-list a {
+    font-size: 1.3vw;
+  }
+  .sub-menu {
+    width: 20vw;
+  }
+
+  .nav-list a {
+    padding: 0 3vw;
+        line-height: 2;
+  }
+}
+@media screen and (min-width: 1900px) {
+
+ .nav-list li:hover > .sub-menu{
+    top:20rem;
+  }
+}
+
 </style>

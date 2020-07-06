@@ -32,7 +32,7 @@ export default {
 <style scoped>
 
 .map-container {
-  padding: 15vw 5vw;
+  padding: 20vw 5vw;
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -49,8 +49,9 @@ export default {
 }
 
 .map img {
-  width: 95vw;
-  margin-bottom: 5vw;
+  width: 100%;
+  margin-left: -7%;
+  margin-bottom: 10vw;
 }
 
 .map.border {
@@ -60,7 +61,7 @@ export default {
 
 @media screen and (min-width: 640px) {
   .map-container {
-    padding: 5vw;
+      padding: 10vw 5vw;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -69,11 +70,18 @@ export default {
     margin-bottom: 0vw;
   }
   .map-text h1 {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
   .map-text {
     align-self: center;
     width: 48%;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .map-text h1 {
+    font-size: 2.5vw;
   }
 }
 </style>
