@@ -1,0 +1,10 @@
+query category($businessName:String!)
+  category(name: $businessName) {
+    catid
+    companys{
+      cid
+      name
+      phone
+    }
+  }
+}

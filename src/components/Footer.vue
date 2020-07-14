@@ -1,6 +1,6 @@
 <template>
-  <div class="footer">
-    <div class="footer-container">
+  <div class="footer-container">
+    <div>
       <div class="footer-text">
         <img src="@/assets/logo_sm.png" />
         <p>
@@ -12,22 +12,20 @@
       <div class="footer-menu">
         <div class="company">
           <h1>Company</h1>
-          <a href="#">About</a>
+          <a href="/about">About</a>
           <a href="#">Legal</a>
           <a href="#">Blog</a>
-          <a href="#">Contact</a>
-          <a href="#">Report Spam</a>
-          <a href="#">Branding Guidelines</a>
-          <a href="#">Supported Sources</a>
+          <a href="/contact">Contact</a>
+          <a href="/report-spam">Report Spam</a>
+          <a href="/branding-guidelines">Branding Guidelines</a>
         </div>
         <div class="get-listed">
           <h1>Get Listed</h1>
-          <a href="#">Login</a>
-          <a href="#">Sign Up</a>
-          <a href="#">Add Business Free</a>
-          <a href="#">Suggest a Business</a>
-          <a href="#">Featured Pick</a>
-          <a href="#">Compare Plans</a>
+          <a href="/login">Login</a>
+          <a href="/signup">Sign Up</a>
+          <a href="/add-business-free">Add Business Free</a>
+          <a href="/suggest-a-business">Suggest a Business</a>
+          <a href="/compare-plans">Compare Plans</a>
         </div>
       </div>
     </div>
@@ -44,13 +42,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
-.footer {
+.footer-container {
   padding: 20vw 5vw 10vw;
   color: white;
+  font-family: "Playfair Display", serif;
   background-color: black;
 }
 
-.footer-container {
+.footer-container > div {
   display: flex;
   flex-direction: column;
 }
@@ -120,10 +119,10 @@ span.copyright {
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
+  .footer-container {
     padding: 5vw 6vw 2vw;
   }
-  .footer-container {
+  .footer-container > div {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -151,11 +150,12 @@ span.copyright {
     width: 45%;
   }
 
-  .footer-text p, .footer-menu a {
+  .footer-text p,
+  .footer-menu a {
     font-size: 2vw;
   }
 
-    span.copyright {
+  span.copyright {
     position: relative;
     top: -80px;
     font-size: 1.5vw;
@@ -163,7 +163,6 @@ span.copyright {
 }
 
 @media screen and (min-width: 1024px) {
-
   span.copyright {
     font-size: 16px;
     position: relative;
@@ -172,7 +171,8 @@ span.copyright {
 }
 
 @media screen and (min-width: 1200px) {
-   .footer-text p,.footer-menu a {
+  .footer-text p,
+  .footer-menu a {
     font-size: 1.6vw;
   }
   span.copyright {
@@ -180,12 +180,11 @@ span.copyright {
     top: -80px;
   }
 
-
   .footer-menu h1 {
     font-size: 2vw;
   }
 
-    .footer-text {
+  .footer-text {
     width: 34%;
   }
 }

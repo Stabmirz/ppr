@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ backgroundImage: `url(${bg1})` }" class="form container">
+  <div :style="{ backgroundImage: `url(${bg1})` }" class="form main-container">
     <div :style="{ backgroundImage: `url(${bg2})` }" class="bg">
       <div class="heading">
         <h1>Search for the Best Businesses at BusinessRate</h1>
@@ -8,38 +8,43 @@
           instantly view their latest ratings and reviews
         </p>
       </div>
-      <div class="input-container">
-        <div>
-          <input
-            type="text"
-            v-model="location"
-            placeholder="Current Location"
-            class="input input1"
-          />
+      <form @submit="onSubmit">
+        <div class="input-container">
+          <div>
+            <input
+              type="text"
+              v-model="location"
+              placeholder="Current Location"
+              class="input input1"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              v-model="businessName"
+              class="input input2"
+              placeholder="Business name, Plumber, HVAC..."
+            />
+          </div>
+          <div>
+            <input type="submit" value="Find Business" class="input input3" />
+          </div>
         </div>
-        <div>
-          <input
-            type="text"
-            v-model="businessName"
-            class="input input2"
-            placeholder="Business name, Plumber, HVAC..."
-          />
-        </div>
-        <div>
-          <input
-            type="submit"
-            @click="search"
-            value="Find Business"
-            class="input input3"
-          />
-        </div>
+      </form>
+    </div>
+
+    <div v-if="category" class="result apollo">
+      <div class="data" v-for="company in category.companys" :key="company.cid">
+        <h3>Company Name: {{ company.name }}</h3>
+        <p>Company Phone:{{ company.phone }}</p>
       </div>
     </div>
-    <img src="@/assets/gold-striped-background-1.jpg" class="border" />
+    <img src="@/assets/gold-striped-background-1.jpg" class="img-border" />
   </div>
 </template>
 
 <script>
+import gql from "graphql-tag";
 import bg1 from "@/assets/radial-gradient.jpg";
 import bg2 from "@/assets/phoenix-city-25.png";
 export default {
@@ -52,9 +57,39 @@ export default {
       bg2,
     };
   },
+
+  apollo: {
+    category: {
+      // GraphQL Query
+      query: gql`
+        query category($businessName: String!) {
+          category(name: $businessName) {
+            catid
+            companys {
+              cid
+              name
+              phone
+            }
+          }
+        }
+      `,
+      // Reactive variables
+      variables() {
+        return {
+          businessName: this.businessName,
+        };
+      },
+      // Disable the query
+      skip() {
+        return this.skipQuery;
+      },
+    },
+  },
+
   methods: {
-    search: () => {
-      alert("button clicked");
+    onSubmit(evt) {
+      evt.preventDefault();
+      this.$apollo.queries.category.skip = false;
     },
   },
 };
@@ -63,12 +98,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
-.form.container {
+.data {
+  color: white;
+  font-size: 20px;
+}
+
+.form.main-container {
   padding: 15vw 0vw 0vw;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  font-family: "Playfair Display", serif;
 }
 
 .bg {
@@ -97,7 +138,7 @@ export default {
 
 .input {
   border-radius: 40px;
-  padding: 30px;
+  padding: 20px;
   width: 75vw;
   border: transparent;
   color: black;
@@ -120,7 +161,6 @@ export default {
   display: inline-block;
   cursor: pointer;
   color: #333333;
-  font-family: Arial;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -132,8 +172,8 @@ export default {
   background-color: #ffab23;
 }
 
-.form.container img.border {
-  box-shadow: 7px 15px #cecece;
+.form.main-container img.img-border {
+  box-shadow: 7px 12px #cecece;
 }
 
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
@@ -159,7 +199,7 @@ export default {
 }
 
 @media screen and (min-width: 640px) {
-  .form.container {
+  .form.main-container {
     padding: 10vw 0vw 0vw;
   }
 
@@ -189,6 +229,8 @@ export default {
 
   .input {
     width: 30vw;
+
+    padding: 30px;
   }
 }
 
@@ -233,6 +275,9 @@ export default {
   .heading p {
     font-size: 2vw;
     margin-bottom: 3vw;
+  }
+  .form.main-container img.img-border {
+    box-shadow: 7px 15px #cecece;
   }
 }
 </style>
