@@ -23,8 +23,9 @@ const getCompanyQuery = gql`
       suggested
       favorite
       approved
-      categoryname{
+      categoryname {
         name
+        short_name
       }
       hours {
         cid
@@ -72,10 +73,24 @@ const getCompanyQuery = gql`
           city
           state
         }
-        reply{
+        reply {
           rid
           comment
           date
+        }
+      }
+      extReviews {
+        id
+        cid
+        rsi
+        rating
+        quantity
+        date
+        source {
+          id
+          name
+          url
+          logo
         }
       }
       owner {
